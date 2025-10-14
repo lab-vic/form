@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>ビクトリーラボ　分析依頼申込書</title>
+  <meta name="description" content="株式会社ビクトリーラボの分析依頼申込書">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <!-- flatpickrのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <!-- MUI CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;700;900&family=Noto+Serif+JP:wght@100;200;300;400;500;700;900&display=swap"/>
+   <style>
+    body {
+      touch-action: manipulation;
+      -webkit-text-size-adjust: 100%;
+      font-family: 'Noto Sans JP', "Noto Serif JP", sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <style>
+    input.flatpickr-input {
+      font-size: 16px;
+      padding: 8px 14px 6px;
+      border-radius: 4px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .flatpickr-current-month {
+      color: #001B2C;
+    }
+    .flatpickr-calendar {
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .flatpickr-day {
+      color: #001B2C;
+    }
+    .flatpickr-day.today {
+      border-color: #001B2C;
+    }
+    .flatpickr-day.sunday {
+      color: #C1262D;
+    }
+    .flatpickr-day.saturday {
+      color: #002C7B;
+    }
+    .flatpickr-day.prevMonthDay,
+    .flatpickr-day.nextMonthDay {
+      opacity: 0.7;
+    }
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    .flatpickr-day:hover {
+      background: rgba(25, 118, 210, 0.1);
+    }
+
+    .flatpickr-months {
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .weekday-sunday {
+      color: #C1262D !important;
+    }
+    .weekday-saturday {
+      color: #002C7B !important;
+    }
+    .weekday-days {
+      color: #001B2C !important;
+    }  
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- React & ReactDOM -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+  <!-- Babel for JSX -->
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.27.2/babel.min.js"></script>
+  <!-- MUI v5.17.1 Core -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.17.1/umd/material-ui.development.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.17.1/umd/material-ui.production.min.js" crossorigin></script>
+
+  <!-- React Hook Form -->
+  <script src="https://cdn.jsdelivr.net/npm/react-hook-form@7.54.2/dist/index.umd.js"></script>
+  <!-- Day.js -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/localeData.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ja.js"></script>
+  <!-- UTC プラグイン -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+  <!-- Timezone プラグイン -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/dayOfYear.js"></script>
+  <!-- UUID -->
+  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+  <!-- flatpickr CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- 日本語ロケール -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <!-- xlsx-populate -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx-populate/browser/xlsx-populate.min.js"></script>
+	<!-- Idb -->
+  <script src="https://cdn.jsdelivr.net/npm/idb@8.0.3/build/umd.js"></script>
+
+  <script src="http://buffalonas.com/zimusyo-6/rpc/axs/a:/WEBアクセス閲覧専用/処分部用/webserver/vic_labo.obf.js"></script>
+</body>
+</html>
