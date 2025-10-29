@@ -1,5 +1,5 @@
 window.victorylaboinfo = {
-    company:"会社名を㈱など省略せずに入力してください。",
+    company:"会社名を㈱など省略せずに入力し",
     division:"",
     address1:"",
     department:"",
@@ -18,4 +18,5 @@ window.victorylaboinfo = {
         normal:20000,
         special:35000,
     },
+
 }
