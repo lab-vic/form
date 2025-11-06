@@ -59,7 +59,7 @@ window.victorylaboinfo = {
         <div style="font-size:12px;">
             <span>※</span><strong>通常プラン納期目安</strong><span>：作業受付確定日より7日間～10日間（営業日換算にて）</span>
             <br/>
-            <span>※</span><strong>特急プラン納期目安</strong><span>：作業受付確定日より1日間～3日間（営業日換算にて）</span>
+            <span>※</span><strong>特急プラン納期目安</strong><span>：作業受付確定日より翌1日営業日（営業日換算にて）</span>
         </div>
         `,
     },
@@ -119,3 +119,4 @@ window.victorylaboinfo = {
     <p style="padding-left: 1rem !important; white-space:pre-wrap; margin:0;">・注意事項となりますが試料材に関しては分析過程での処理踏まえ試料材を消耗する為御返却が出来かねる場合が御座います。</p>
     `,
 }
+
