@@ -126,25 +126,24 @@
   <!-- DOMPurify -->
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
   <script src="https://lab-vic.github.io/form/vic_labo.obf.js"></script>
-	<script>
-(async () => {
-  const log = (msg) => document.getElementById("log").textContent += msg + "\n";
+<script>
+window.addEventListener("DOMContentLoaded", async () => {
+  const logEl = document.getElementById("log");
+  const log = (msg) => (logEl.textContent += msg + "\n");
 
   try {
     const db = await window.idb.openDB("mydb", 1, {
       upgrade(db) {
-        if (!db.objectStoreNames.contains("store")) {
-          db.createObjectStore("store");
-        }
+        db.createObjectStore("store");
       },
     });
-    await db.put("store", "Hello from GitHub Pages", "key1");
-    const value = await db.get("store", "key1");
-    log("✅ IndexedDB OK: " + value);
+    await db.put("store", "hello", "key1");
+    const val = await db.get("store", "key1");
+    log("✅ IndexedDB OK: " + val);
   } catch (err) {
-    log("❌ IndexedDB Error: " + err.message);
+    log("❌ Error: " + err.message);
   }
-})();
+});
 </script>
   
 
