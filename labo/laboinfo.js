@@ -73,6 +73,137 @@ window.victorylaboinfo = {
         normal:12000,
         special:25000,
     },
+    scriptAccess:{
+        prefectures:"https://lab-vic.github.io/form/prefectures/",
+        zipcloud:"https://zipcloud.ibsnet.co.jp/api/search?zipcode=",
+        analyzeExcelForm:"https://lab-vic.github.io/form/templates/",
+    },
+    infomationComponents: {
+        company: "株式会社ビクトリーラボ",
+        title: "【お知らせ】",
+        streambot:
+            "📢 いつもビクトリーラボをご利用いただきありがとうございます。 2025年11月より、分析依頼フォームが新仕様にリニューアルされました。 ご利用方法や入力手順の詳細については以下の画像をご参照ください。",
+        streamtime:40,
+        streamposition:55,
+        sort: "asc",
+
+        notification: {
+            0: {
+                date: "2025-12-24",
+                title: "🎍年末年始のお知らせ",
+                content: `
+                    平素より当社サービスをご利用いただき、誠にありがとうございます。<br><br>
+
+                    年末年始の営業につきまして、下記の通りご案内申し上げます。<br><br>
+
+                    ■ 年内最終営業日<br>
+                    2025年12月28日（日）<br><br>
+
+                    ■ 年末年始休業期間<br>
+                    2025年12月29日（月）〜 2026年1月3日（土）<br><br>
+
+                    ■ 年始営業開始日<br>
+                    2026年1月4日（日）<br><br>
+
+                    休業期間中にいただきましたお問い合わせにつきましては、<br>
+                    年始営業日より順次対応させていただきます。<br><br>
+
+                    皆さまにはご不便をおかけいたしますが、<br>
+                    何卒ご理解賜りますようお願い申し上げます。<br><br>
+
+                    本年もご愛顧いただきありがとうございました。<br>
+                    来年も変わらぬご支援のほど、よろしくお願い申し上げます。<br>
+                `,
+                imageSize: 120,
+                imagePosition: "left",
+                image: {
+                    visible: true,
+                    src: "/images/info_yearend.webp",
+                },
+                video:{
+                    visible:false,
+                    src:"bg.mp4",
+                    type:"video/mp4",
+                }
+            }
+        }
+    },
+
+    /*==============================
+      homeComponents（修正版）
+    ==============================*/
+    homeComponents:{
+        video:{ 
+            visible:true,
+            src:"bg.mp4",
+            license:true,
+            type:"video/mp4",
+        },
+        image:{ 
+            visible:false,
+            src:"bg.webp",
+            license:true,
+        },
+
+        buttonSize:"368px",
+        repeatColumn:2,
+
+        card:{
+            0:{
+                icon:{ set:true, name:"edit_document", style:{ fontSize:24 } },
+                button:{ title:"アスベスト分析依頼申込書の入力へ", style:{} },
+            },
+
+            1:{
+                action:{
+                    href:"https://lab-vic.github.io/form/templates/分析依頼申込書(手書き用).pdf",
+                    target:"_blank",
+                    rel:"noopener noreferrer",
+                    underline:"none",
+                    color:"inherit",
+                },
+                icon:{ name:"download_2", style:{ fontSize:24 } },
+                button:{ title:"手書き申込書の表示・印刷", styleSx:{} },
+            },
+
+            2:{
+                action:{
+                    href:"https://lab-vic.github.io/form/templates/分析試料採取と発送時の注意点.pdf",
+                    target:"_blank",
+                    rel:"noopener noreferrer",
+                    underline:"none",
+                    color:"inherit",
+                },
+                icon:{ name:"trolley", style:{ fontSize:24 } },
+                button:{ title:"分析試料採取と発送時の注意点", styleSx:{} },
+            },
+
+            3:{
+                action:{
+                    href:"https://lab-vic.github.io/form/templates/分析試料採取と発送時の注意点.pdf",
+                    target:"_blank",
+                    rel:"noopener noreferrer",
+                    underline:"none",
+                    color:"inherit",
+                },
+                icon:{ name:"trolley", style:{ fontSize:24 } },
+                button:{ title:"分析試料採取と発送時の注意点", styleSx:{ m:0 } },
+            },
+
+            4:{
+                action:{
+                    href:"https://lab-vic.github.io/form/templates/料金表.pdf",
+                    target:"_blank",
+                    rel:"noopener noreferrer",
+                    underline:"none",
+                    color:"inherit",
+                },
+                icon:{ name:"receipt_long", style:{ fontSize:24 } },
+                button:{ title:"料金表を見る", styleSx:{} },
+            },
+        }
+    },
+
     constraints:`
     <strong>■取引開始に伴う登録事項</strong>
     <p style="padding-left: 1rem !important; white-space:pre-wrap; margin:0;">御依頼に先立ち、弊社グループ内で初回お取引となる場合は、取引申込書（売掛申込書）を御記入or御入力いただいております。（弊社と既にお取引がある場合は、取引申込書（売掛申込書）は不要です。）ご依頼には分析申込書の御記入or御入力をお願い致します。</p>
@@ -118,6 +249,6 @@ window.victorylaboinfo = {
     <p style="padding-left: 1rem !important; white-space:pre-wrap; margin:0;">・試料材の返却を御要望の場合は分析申込書内の試料材の返却要望欄の「有り」にチェック（☑）を入力ください。なお返却は着払いにて送付させて頂きます・試料材の返却の御要望がない試料材に関しては当社にて一定期間（20～30日間）保管させて頂き、適正に廃棄処理させて頂きます。</p>
     <p style="padding-left: 1rem !important; white-space:pre-wrap; margin:0;">・注意事項となりますが試料材に関しては分析過程での処理踏まえ試料材を消耗する為御返却が出来かねる場合が御座います。</p>
     `,
-}
+};
 
 
